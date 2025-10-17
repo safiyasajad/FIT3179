@@ -1,33 +1,39 @@
 /* style.css */
 
-/* Basic page setup */
+/* General layout */
 body {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f9fafb;
   color: #222;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
 }
 
-/* Title styling */
+/* Headings */
 h1 {
-  text-align: center;
   margin: 30px 0 10px 0;
   font-size: 2rem;
-  font-weight: 600;
+  text-align: center;
   color: #333;
 }
 
-/* Visualization container */
-#map_idiom {
+h2 {
+  text-align: center;
+  color: #444;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+/* Visualization containers */
+#map_idiom, #stacked_bar_chart {
   width: 90%;
   max-width: 900px;
   height: 550px;
-  background: white;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -35,14 +41,13 @@ h1 {
   margin-bottom: 40px;
 }
 
-/* Optional: Add a hover glow effect */
-#map_idiom:hover {
+#map_idiom:hover, #stacked_bar_chart:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease;
 }
 
-/* Make sure Vega visualization fits inside */
-#map_idiom > div {
+/* Fit Vega charts properly */
+#map_idiom > div, #stacked_bar_chart > div {
   width: 100% !important;
   height: 100% !important;
 }
